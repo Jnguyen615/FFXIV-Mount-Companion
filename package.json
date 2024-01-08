@@ -1,0 +1,15 @@
+{
+  "name": "ffxiv-mount-companion",
+  "version": "1.0.0",
+  "description": "FFXIV Mount companion",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/Jnguyen615/FFXIV-Mount-Companion"
+  },
+  "author": "Jen Nguyen",
+  "license": "ISC"
+}
