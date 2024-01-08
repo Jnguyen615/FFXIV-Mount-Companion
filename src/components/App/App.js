@@ -1,12 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
-
+import Header from '../Header/Header';
+import FFXIVLogo from '../FFXIVLogo/FFXIVLogo';
 
 function App() {
   return (
     <main className="app">
       <Header />
       <FFXIVLogo />
-      <Routes>
+      {/* <Routes>
         <Route exact path="/" element={<AllMountsDisplay />} />
         <Route exact path="/mount/:id" element={<MountCardPage />} />
         <Route
@@ -15,7 +16,7 @@ function App() {
           element={<collectedMountsPage />}
         />
         <Route path="*" element={<ErrorPage/>} />
-      </Routes>
+      </Routes> */}
     </main>
   );
 }
