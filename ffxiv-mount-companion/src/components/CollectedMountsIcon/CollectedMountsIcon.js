@@ -1,6 +1,7 @@
 import { useState } from 'react';
 
 const CollectedMountIcon = () => {
+  const isFavorite = true 
   const [isFavorited, setIsFavorited] = useState(isFavorite);
 
   return (
