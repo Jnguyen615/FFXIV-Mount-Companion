@@ -1,5 +1,7 @@
 import NavBar from '../NavBar/NavBar';
 import MountCard from '../MountCard/MountCard'
+import Header from '../Header/Header';
+import FFXIVLogo from '../FFXIVLogo/FFXIVLogo'
 
 const MainDisplay = ({ mounts }) => {
 
@@ -18,10 +20,11 @@ const MainDisplay = ({ mounts }) => {
   ));
 
   return (
-    <main className="nav-bar">
+    <main className="main-display">
+      <Header /> 
+      <FFXIVLogo /> 
       <NavBar />
       {mountCards}
-      {/* <MountCardPage />  */}
     </main>
   );
 };
