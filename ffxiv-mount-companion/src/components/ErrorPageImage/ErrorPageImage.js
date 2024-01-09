@@ -1,5 +1,5 @@
-import './ErrorPage.scss';
-import Hydra from '../../Images/hydra.png'
+import './ErrorPageImage.scss';
+import Hydra from "../../Images /hydra.png"
 
 const ErrorPageLogo = () => {
   return (
