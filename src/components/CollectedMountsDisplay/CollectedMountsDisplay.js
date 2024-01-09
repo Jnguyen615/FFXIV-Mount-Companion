@@ -1,4 +1,5 @@
 import './CollectedMounts.scss'
+// import NoCollectedMountsLogo from '../NoCollectedMountsLogo/NoCollectedMountsLogo'
 
 const CollectedMounts = () => {
   return (
@@ -7,7 +8,10 @@ const CollectedMounts = () => {
       <h1 className='collected-mounts-title'>My Mounts</h1>
       <div className='collected-mounts-container'>
         {/* {displayCollectedmounts} */}
+        {/* <NoCollectedMountsLogo */}
       </div>
     </main>
   )
 }
+
+export default CollectedMounts
