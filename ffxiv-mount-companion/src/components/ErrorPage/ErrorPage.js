@@ -5,7 +5,7 @@ const ErrorPage = () => {
   return (
     <main className="error-page">
       <ErrorPageImage />
-      <h1>Oops! Something went wrong, please go back.</h1>
+      <h1 className='error-page-text'>Oops! Something went wrong, please go back.</h1>
       <Link to="/main">
         <button>Back to All Mounts</button>
       </Link>

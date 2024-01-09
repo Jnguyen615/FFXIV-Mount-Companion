@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+}
+
+.app-title {
+  font-family: 'Righteous', sans-serif;
+  font-size: 3em;
+  color: #fcf302; /* Yellow color */
+  text-shadow: 0 0 10px #fcf302, 0 0 20px #fcf302, 0 0 30px #fcf302, 0 0 40px #333, 0 0 70px #333, 0 0 80px #333, 0 0 100px #333, 0 0 150px #333;
+  animation: glow 3s infinite alternate;
+  margin-right: 20px
+}
+
+@keyframes glow {
+  to {
+    text-shadow: 0 0 5px #fcf302, 0 0 10px #fcf302, 0 0 10px #fcf302, 0 0 20px #333, 0 0 35px #333, 0 0 40px #333, 0 0 50px #333, 0 0 75px #333;
+  }
+}

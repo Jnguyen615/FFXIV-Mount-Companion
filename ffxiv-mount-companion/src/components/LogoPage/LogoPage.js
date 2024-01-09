@@ -5,14 +5,14 @@ import BlackChocobo from '../../Images /Chubby-chocobo.webp';
 const LogoPage = () => {
   return (
     <div className="logo-page">
-      <header className="logo-page-header">
         <FFXIVLogo />
-        <h1 className="page-name">Mount Companion Site</h1>
+      <div className="logo-page-header">
         <img className="black-chocobo" src={BlackChocobo} />
+        <h1 className="page-name">Mount Companion Site</h1>
         <Link to="/main">
           <button className="click-me">Click to Enter!</button>
         </Link>
-      </header>
+      </div>
     </div>
   );
 };
