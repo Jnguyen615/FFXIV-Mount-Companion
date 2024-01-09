@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import Header from '../Header/Header';
 import MainDisplay from "../MainDisplay/MainDisplay"
 import ErrorPage from '../ErrorPage/ErrorPage'
+import LogoPage from '../LogoPage/LogoPage'
 import FFXIVLogo from '../FFXIVLogo/FFXIVLogo';
 import { retrieveMounts } from '../../ApiCall'
 
@@ -22,10 +23,9 @@ function App() {
 
   return (
     <main className="app">
-      <Header />
-      <FFXIVLogo />
       <Routes>
-        <Route exact path="/" element={<MainDisplay mounts={mounts}/>} />
+        <Route exact path="/" element={<LogoPage />} />
+        <Route exact path="/main" element={<MainDisplay mounts={mounts}/>} />
         {/* <Route exact path="/mount/:id" element={<MountCardPage />} /> */}
         {/* <Route */}
           {/* exact */}
