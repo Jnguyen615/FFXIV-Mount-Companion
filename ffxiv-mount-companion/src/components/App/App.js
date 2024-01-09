@@ -93,6 +93,7 @@ function App() {
             <CollectedMountDisplay
               collectedMounts={collectedMounts}
               toggleCollectedMounts={toggleCollectedMounts}
+              openIndividualMountCard={openIndividualMountCard}
             />
           }
         />
