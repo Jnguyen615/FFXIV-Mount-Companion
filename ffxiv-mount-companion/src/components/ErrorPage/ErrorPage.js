@@ -1,12 +1,14 @@
 import ErrorPageImage from '../ErrorPageImage/ErrorPageImage';
 import './ErrorPage.scss';
-
+import { Link } from 'react-router-dom';
 const ErrorPage = () => {
   return (
     <main className="error-page">
-      <ErrorPageImage /> 
+      <ErrorPageImage />
       <h1>Oops! Something went wrong, please go back.</h1>
-      <button>Back to All Mounts</button>
+      <Link to="/main">
+        <button>Back to All Mounts</button>
+      </Link>
     </main>
   );
 };

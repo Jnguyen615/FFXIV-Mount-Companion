@@ -1,12 +1,17 @@
 import { useState } from 'react';
 
-const CollectedMountIcon = () => {
-  const isFavorite = true 
-  const [isFavorited, setIsFavorited] = useState(isFavorite);
+const CollectedMountIcon = ({toggleCollectedMounts}) => {
+  const collected = true 
+  const [isCollected, setIsCollected] = useState(collected);
+
+  const handleClick = (id) => {
+    setIsCollected((prev) => !prev);
+    toggleCollectedMounts();
+  };
 
   return (
     <div className='collected-mount-icon'>
-      {isFavorited ? (
+      {isCollected ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="30"
