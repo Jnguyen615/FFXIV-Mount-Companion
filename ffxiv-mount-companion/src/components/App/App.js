@@ -8,7 +8,7 @@ function App() {
       <Header />
       <FFXIVLogo />
       {/* <Routes>
-        <Route exact path="/" element={<AllMountsDisplay />} />
+        <Route exact path="/" element={<MainDisplay />} />
         <Route exact path="/mount/:id" element={<MountCardPage />} />
         <Route
           exact
