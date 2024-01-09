@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import FFXIVLogo from '../FFXIVLogo/FFXIVLogo';
 
-const CollectedMountsDisplay = ({ collectedMounts, togglecollectedMount }) => {
+const CollectedMountsDisplay = ({ collectedMounts, toggleCollectedMounts, openIndividualMountCard }) => {
   const displayCollectedMounts = collectedMounts.map(mount => (
     <MountCard
       key={`${mount.id}-${mount.name}`}
@@ -16,7 +16,8 @@ const CollectedMountsDisplay = ({ collectedMounts, togglecollectedMount }) => {
       image={mount.image}
       description={mount.description}
       collectedMounts={collectedMounts}
-      togglecollectedMount={togglecollectedMount}
+      toggleCollectedMounts={toggleCollectedMounts}
+      openIndividualMountCard={openIndividualMountCard}
     />
   ));
 

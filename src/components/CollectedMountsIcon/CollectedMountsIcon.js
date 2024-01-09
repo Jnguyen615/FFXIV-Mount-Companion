@@ -1,8 +1,7 @@
 import { useState } from 'react';
 
-const CollectedMountIcon = ({toggleCollectedMounts}) => {
-  const collected = true 
-  const [isCollected, setIsCollected] = useState(collected);
+const CollectedMountIcon = ({ toggleCollectedMounts, isNowCollected }) => {
+  const [isCollected, setIsCollected] = useState(isNowCollected);
 
   const handleClick = (id) => {
     setIsCollected((prev) => !prev);
@@ -10,8 +9,8 @@ const CollectedMountIcon = ({toggleCollectedMounts}) => {
   };
 
   return (
-    <div className='collected-mount-icon'>
-      {isCollected ? (
+    <div className='collected-mount-icon' onClick={handleClick}>
+      {isNowCollected ? (
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="30"

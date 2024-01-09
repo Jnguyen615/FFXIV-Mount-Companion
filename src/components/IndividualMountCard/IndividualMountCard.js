@@ -32,6 +32,7 @@ const IndividualMountCard = ({
           mount={mount}
           collectedMounts={collectedMounts || []}
           className="favorite-icon"
+          toggleCollectedMounts={toggleCollectedMounts}
         />
 
         <Link to="/main">
