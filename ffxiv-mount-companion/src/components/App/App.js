@@ -1,17 +1,22 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import Header from '../Header/Header';
 import MainDisplay from '../MainDisplay/MainDisplay';
 import ErrorPage from '../ErrorPage/ErrorPage';
 import CollectedMountDisplay from '../CollectedMountsDisplay/CollectedMountsDisplay';
 import LogoPage from '../LogoPage/LogoPage';
+import IndividualMountCard from '../IndividualMountCard/IndividualMountCard'
 import FFXIVLogo from '../FFXIVLogo/FFXIVLogo';
 
 import { retrieveMounts } from '../../ApiCall';
 
 function App() {
   const [mounts, setMounts] = useState([]);
-  const [collectedMounts, setcollectedMounts] = useState([]);
+  const [collectedMounts, setCollectedMounts] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedMountId, setSelectedMountId] = useState(null);
+  const navigate = useNavigate();
+
   useEffect(() => {
     retrieveMounts()
       .then(data => {
@@ -22,19 +27,29 @@ function App() {
         console.error('Error fetching mounts data:', error);
       });
   }, []);
+  const openIndividualMountCard = id => {
+    setSelectedMountId(id);
+    console.log("id:", id)
+    setIsModalOpen(true);
+  };
 
-  const togglecollectedMounts = mount => {
-    const isFavorited = collectedMounts.some(
+  const closeIndividualMountCard = () => {
+    setIsModalOpen(false);
+    navigate('/');
+  };
+
+  const toggleCollectedMounts = mount => {
+    const isCollected = collectedMounts.some(
       favMount => favMount.id === mount.id,
     );
 
-    if (isFavorited) {
-      const updatedFavorites = collectedMounts.filter(
+    if (isCollected) {
+      const updatedCollected = collectedMounts.filter(
         favMount => favMount.id !== mount.id,
       );
-      setcollectedMounts(updatedFavorites);
+      setCollectedMounts(updatedCollected);
     } else {
-      setcollectedMounts(prevFavorites => [...prevFavorites, mount]);
+      setCollectedMounts(prevCollected => [...prevCollected, mount]);
       console.log('Added to Favorites:', mount);
     }
   };
@@ -43,15 +58,41 @@ function App() {
     <main className="app">
       <Routes>
         <Route exact path="/" element={<LogoPage />} />
-        <Route exact path="/main" element={<MainDisplay mounts={mounts} />} />
-        {/* <Route exact path="/mount/:id" element={<MountCardPage />} /> */}
+        <Route
+          exact
+          path="/main"
+          element={
+            <MainDisplay
+              mounts={mounts}
+              openIndividualMountCard={openIndividualMountCard}
+              collectedMounts={collectedMounts}
+              toggleCollectedMounts={toggleCollectedMounts}
+              isModalOpen={isModalOpen}
+            />
+          }
+        />
+        <Route
+          exact
+          path="/mount/:id"
+          element={
+            <IndividualMountCard
+            openIndividualMountCard={openIndividualMountCard}
+            closeIndividualMountCard={closeIndividualMountCard}
+              selectedMountId={selectedMountId}
+              mounts={mounts}
+              toggleCollectedMounts={toggleCollectedMounts}
+              collectedMounts={collectedMounts}
+              setCollectedMounts={setCollectedMounts}
+            />
+          }
+        />
         <Route
           exact
           path="/collectedmounts"
           element={
             <CollectedMountDisplay
               collectedMounts={collectedMounts}
-              togglecollectedMounts={togglecollectedMounts}
+              toggleCollectedMounts={toggleCollectedMounts}
             />
           }
         />
