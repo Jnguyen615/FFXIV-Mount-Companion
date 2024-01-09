@@ -4,6 +4,7 @@ import FireBird from '../../Images /firebird-mount.webp'
 
 // import NoCollectedMountsLogo from '../NoCollectedMountsLogo/NoCollectedMountsLogo'
 import { Link } from 'react-router-dom';
+import Header from '../Header/Header';
 
 const CollectedMountsDisplay = ({ collectedMounts, togglecollectedMount }) => {
   const displayCollectedMounts = collectedMounts.map(mount => (
@@ -20,6 +21,7 @@ const CollectedMountsDisplay = ({ collectedMounts, togglecollectedMount }) => {
 
   return (
     <main className="collected-mounts-page">
+      <Header />
       <Link to="/main">
         <button className="back-to-all-btn">Back To Mounts</button>
       </Link>

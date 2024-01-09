@@ -5,7 +5,7 @@ import Logo from '../Logo/Logo'
 const Header = () => {
   return (
     <header className='header'>
-    <h1 className='page-header'>FFXIV Mount Companion</h1>
+    <h1 className='app-title'>FFXIV Mount Companion</h1>
     <Logo /> 
     </header>
   )
