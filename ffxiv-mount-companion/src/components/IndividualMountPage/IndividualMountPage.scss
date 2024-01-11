@@ -1,8 +1,13 @@
+* {
+  font-family: 'Righteous', 'sans-serif'
+}
+
 .wrapper {
   display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 99%
 }
 
 .mount-page {
@@ -31,6 +36,7 @@
   color: white;
   font-size: 1.5em;
   margin-left: 1%;
+  width: 85%
 }
 
 .mount-info {
@@ -39,4 +45,9 @@
   color: white;
   width: 100%;
   font-size: 1.5em;
+}
+
+.collected-mount-icon {
+  margin-left: 7%;
+
 }
