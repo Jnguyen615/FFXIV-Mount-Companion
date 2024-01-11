@@ -25,6 +25,19 @@ function App() {
       });
   }, []);
 
+  useEffect(() => {
+    localStorage.setItem('collectedMounts', JSON.stringify(collectedMounts))
+    
+  }, [collectedMounts]);
+  
+  useEffect(() => {
+    const storedCollectedMounts = localStorage.getItem('collectedMounts');
+    if (storedCollectedMounts) {
+      setCollectedMounts(JSON.parse(storedCollectedMounts));
+    }
+  }, []);
+
+
   const openIndividualMountPage = mountId => {
     setSelectedMountId(mountId);
     navigate(`/mount/${mountId}`);

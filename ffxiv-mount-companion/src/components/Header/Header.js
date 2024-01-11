@@ -1,7 +1,6 @@
 import './Header.scss';
 import './Header.scss';
 import Logo from '../Logo/Logo'
-
 const Header = () => {
   return (
     <header className='header'>
