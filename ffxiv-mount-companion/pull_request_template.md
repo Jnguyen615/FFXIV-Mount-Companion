@@ -13,6 +13,7 @@ Type of change
 - [ ]  Refactor(DRY-ing up/ reorganizing code, etc.)
 - [ ]  Super small fix (Corrected a typo, removed a comment, etc.)
 - [ ]  Skip all the other stuff and briefly explain the fix.
+- [ ]  Testing
 
 Checklist:
 

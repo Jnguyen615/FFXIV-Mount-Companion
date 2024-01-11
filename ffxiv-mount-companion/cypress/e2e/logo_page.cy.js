@@ -9,7 +9,8 @@ describe('should visit the logo page', () => {
       }
     )
   })
-  it('should display the logo page', () => {
+
+  it('should display the logo page and navigate to the main page', () => {
     cy.visit("http://localhost:3000/");
     cy.get(".ffxiv-logo").should('exist')
     .get(".black-chocobo").should('exist')

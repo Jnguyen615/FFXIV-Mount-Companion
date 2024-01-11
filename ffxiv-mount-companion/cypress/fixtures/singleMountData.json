@@ -1,0 +1,26 @@
+{
+  "id": 334,
+  "name": "Spectral Statice",
+  "description": "Summon forth your spectral Statice, an avatar of the mischief-loving faerie from Aloalo Island.",
+  "enhanced_description": "This mischief-loving faerie was originally companion to a scholar, but her aether refused to disperse in the wake of her master's death. After enduring a dull existence for long years, she found in you someone who could provide her with excitement, and thus did she weave an avatar of herself to join you on adventures.",
+  "tooltip": "Most serious scholars consider it little more than a faerie tale. - Phillice",
+  "movement": "Airborne",
+  "seats": 1,
+  "order": 272,
+  "order_group": 107,
+  "patch": "6.51",
+  "item_id": null,
+  "tradeable": false,
+  "owned": "8.6%",
+  "image": "https://ffxivcollect.com/images/mounts/large/334.png",
+  "icon": "https://ffxivcollect.com/images/mounts/small/334.png",
+  "bgm": "https://ffxivcollect.com/music/BGM_Ride_VVD05.ogg",
+  "sources": [
+    {
+      "type": "Achievement",
+      "text": "Good-willed Hunting",
+      "related_type": "Achievement",
+      "related_id": 3347
+    }
+  ]
+}
