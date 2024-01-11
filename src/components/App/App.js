@@ -4,15 +4,14 @@ import MainDisplay from '../MainDisplay/MainDisplay';
 import ErrorPage from '../ErrorPage/ErrorPage';
 import CollectedMountDisplay from '../CollectedMountsDisplay/CollectedMountsDisplay';
 import LogoPage from '../LogoPage/LogoPage';
-import IndividualMountCard from '../IndividualMountCard/IndividualMountCard';
+import IndividualMountPage from '../IndividualMountPage/IndividualMountPage';
 import { retrieveMounts } from '../../ApiCall';
 
 function App() {
   const [mounts, setMounts] = useState([]);
   const [collectedMounts, setCollectedMounts] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedMountId, setSelectedMountId] = useState(null);
-  const [filteredMounts, setFilteredMounts] = useState([]); // New state for filtered mounts
+  const [filteredMounts, setFilteredMounts] = useState([]);
 
   const navigate = useNavigate();
 
@@ -20,16 +19,16 @@ function App() {
     retrieveMounts()
       .then(data => {
         setMounts(data);
-        setFilteredMounts(data)
+        setFilteredMounts(data);
       })
       .catch(error => {
         console.error('Error fetching mounts data:', error);
       });
   }, []);
-  // console.log('collectedMounts', collectedMounts)
 
-  const toggleCollectedMounts = (mount) => {
-    const isNowCollected = collectedMounts.some(favMount => favMount.id === mount.id
+  const toggleCollectedMounts = mount => {
+    const isNowCollected = collectedMounts.some(
+      favMount => favMount.id === mount.id,
     );
 
     if (isNowCollected) {
@@ -41,15 +40,14 @@ function App() {
       setCollectedMounts(prevCollected => [...prevCollected, mount]);
     }
   };
-  
-  const openIndividualMountCard = (id) => {
+
+  const openIndividualMountCard = id => {
     setSelectedMountId(id);
   };
 
-  const handleSearch = (term) => {
-    // Filter mounts based on the search term
-    const filtered = mounts.filter((mount) =>
-      mount.name.toLowerCase().includes(term.toLowerCase())
+  const handleSearch = term => {
+    const filtered = mounts.filter(mount =>
+      mount.name.toLowerCase().includes(term.toLowerCase()),
     );
     setFilteredMounts(filtered);
   };
@@ -76,7 +74,7 @@ function App() {
           exact
           path="/mount/:id"
           element={
-            <IndividualMountCard
+            <IndividualMountPage
               openIndividualMountCard={openIndividualMountCard}
               mounts={mounts}
               toggleCollectedMounts={toggleCollectedMounts}

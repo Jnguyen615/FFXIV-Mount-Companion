@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import PropTypes from 'prop-types';
+
 
 const CollectedMountIcon = ({ toggleCollectedMounts, isCollected }) => {
   
@@ -39,6 +40,11 @@ const CollectedMountIcon = ({ toggleCollectedMounts, isCollected }) => {
       )}
     </div>
   );
+};
+
+CollectedMountIcon.propTypes = {
+  toggleCollectedMounts: PropTypes.func.isRequired,
+  isCollected: PropTypes.bool.isRequired,
 };
 
 export default CollectedMountIcon;

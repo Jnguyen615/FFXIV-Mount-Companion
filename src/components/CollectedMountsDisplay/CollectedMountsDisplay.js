@@ -1,16 +1,23 @@
 import './CollectedMountsDisplay.scss';
-import MountCard from '../MountCard/MountCard'
-import FireBird from '../../Images /firebird-mount.webp'
+import { useParams } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import MountCard from '../MountCard/MountCard';
+import FireBird from '../../Images /firebird-mount.webp';
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import FFXIVLogo from '../FFXIVLogo/FFXIVLogo';
-import { useParams } from 'react-router-dom';
 
-const CollectedMountsDisplay = ({ collectedMounts,   toggleCollectedMounts, openIndividualMountCard, openModal }) => {
+const CollectedMountsDisplay = ({
+  collectedMounts,
+  toggleCollectedMounts,
+  openIndividualMountCard,
+}) => {
   const { id } = useParams();
   const selectedMountId = parseInt(id);
 
-  const selectedMount = collectedMounts.find(mount => mount.id === selectedMountId);
+  const selectedMount = collectedMounts.find(
+    mount => mount.id === selectedMountId,
+  );
 
   const displayCollectedMounts = collectedMounts.map(mount => (
     <MountCard
@@ -22,7 +29,6 @@ const CollectedMountsDisplay = ({ collectedMounts,   toggleCollectedMounts, open
       collectedMounts={collectedMounts}
       toggleCollectedMounts={toggleCollectedMounts}
       openIndividualMountCard={openIndividualMountCard}
-      openModal={openModal}
     />
   ));
 
@@ -42,11 +48,15 @@ const CollectedMountsDisplay = ({ collectedMounts,   toggleCollectedMounts, open
           </p>
         </div>
       )}
-      <div className="collected-mounts-container">
-        {displayCollectedMounts}
-      </div>
+      <div className="collected-mounts-container">{displayCollectedMounts}</div>
     </main>
   );
+};
+
+CollectedMountsDisplay.propTypes = {
+  collectedMounts: PropTypes.array.isRequired,
+  toggleCollectedMounts: PropTypes.func.isRequired,
+  openIndividualMountCard: PropTypes.func.isRequired,
 };
 
 export default CollectedMountsDisplay;
