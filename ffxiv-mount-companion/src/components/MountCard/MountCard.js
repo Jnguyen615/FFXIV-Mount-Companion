@@ -48,7 +48,6 @@ MountCard.propTypes = {
   description: PropTypes.string.isRequired,
   collectedMounts: PropTypes.array.isRequired,
   toggleCollectedMounts: PropTypes.func.isRequired,
-  openModal: PropTypes.func.isRequired,
+  openModal: PropTypes.func.isRequired
 };
-
 export default MountCard;

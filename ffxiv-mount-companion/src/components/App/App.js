@@ -13,8 +13,6 @@ function App() {
   const [selectedMountId, setSelectedMountId] = useState(null);
   const [filteredMounts, setFilteredMounts] = useState([]);
 
-  const navigate = useNavigate();
-
   useEffect(() => {
     retrieveMounts()
       .then(data => {
@@ -45,13 +43,6 @@ function App() {
     setSelectedMountId(id);
   };
 
-  const handleSearch = term => {
-    const filtered = mounts.filter(mount =>
-      mount.name.toLowerCase().includes(term.toLowerCase()),
-    );
-    setFilteredMounts(filtered);
-  };
-
   return (
     <main className="app">
       <Routes>
@@ -62,11 +53,10 @@ function App() {
           element={
             <MainDisplay
               mounts={mounts}
-              openIndividualMountCard={openIndividualMountCard}
               collectedMounts={collectedMounts}
               toggleCollectedMounts={toggleCollectedMounts}
               setSelectedMountId={setSelectedMountId}
-              handleSearch={handleSearch}
+              setFilteredMounts={setFilteredMounts}
             />
           }
         />
@@ -75,11 +65,9 @@ function App() {
           path="/mount/:id"
           element={
             <IndividualMountPage
-              openIndividualMountCard={openIndividualMountCard}
               mounts={mounts}
               toggleCollectedMounts={toggleCollectedMounts}
               collectedMounts={collectedMounts}
-              setCollectedMounts={setCollectedMounts}
             />
           }
         />
