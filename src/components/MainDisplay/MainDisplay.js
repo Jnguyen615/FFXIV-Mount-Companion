@@ -6,42 +6,27 @@ import FFXIVLogo from '../FFXIVLogo/FFXIVLogo';
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-const MainDisplay = ({ mounts, collectedMounts, toggleCollectedMounts, setCollectedMounts }) => {
+const MainDisplay = ({ mounts, collectedMounts, toggleCollectedMounts, setSelectedMountId }) => {
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedMountId, setSelectedMountId] = useState(null);
   const navigate = useNavigate()
   
-  const openModal = mountId => {
+  const openModal = (mountId) => {
     setSelectedMountId(mountId);
-    setIsModalOpen(true);
     navigate(`/mount/${mountId}`);
   };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-    navigate('/');
-  };
- 
-
-  const handleCollectedToggle = (mount) => {
-    toggleCollectedMounts(mount);
-  };
+  
   const mountCards = mounts.map(mount => (
     <div
       key={`${mount.id}-${mount.name}`}
-      // onClick={() => handleCardClick(mount.id)}
     >
       <MountCard
         id={mount.id}
+        mount={mount}
         name={mount.name}
         image={mount.image}
         description={mount.description}
-        isCollectedPage={false}
         collectedMounts={collectedMounts}
         toggleCollectedMounts={id => toggleCollectedMounts(id)}
-        mount={mount}
-        onCollectedToggle={() => handleCollectedToggle(mount)}
         openModal={openModal}
       />
     </div>

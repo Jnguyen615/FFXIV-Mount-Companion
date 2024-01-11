@@ -1,13 +1,10 @@
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate, useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-import Header from '../Header/Header';
 import MainDisplay from '../MainDisplay/MainDisplay';
 import ErrorPage from '../ErrorPage/ErrorPage';
 import CollectedMountDisplay from '../CollectedMountsDisplay/CollectedMountsDisplay';
 import LogoPage from '../LogoPage/LogoPage';
-import IndividualMountCard from '../IndividualMountCard/IndividualMountCard'
-import FFXIVLogo from '../FFXIVLogo/FFXIVLogo';
-
+import IndividualMountCard from '../IndividualMountCard/IndividualMountCard';
 import { retrieveMounts } from '../../ApiCall';
 
 function App() {
@@ -21,37 +18,29 @@ function App() {
     retrieveMounts()
       .then(data => {
         setMounts(data);
-        console.log('MOUNTS:', data);
       })
       .catch(error => {
         console.error('Error fetching mounts data:', error);
       });
   }, []);
-  const openIndividualMountCard = id => {
-    setSelectedMountId(id);
-    console.log("id:", id)
-    setIsModalOpen(true);
-  };
+  // console.log('collectedMounts', collectedMounts)
 
-  const closeIndividualMountCard = () => {
-    setIsModalOpen(false);
-    navigate('/');
-  };
-
-  const toggleCollectedMounts = mount => {
-    const isCollected = collectedMounts.some(
-      favMount => favMount.id === mount.id,
+  const toggleCollectedMounts = (mount) => {
+    const isNowCollected = collectedMounts.some(favMount => favMount.id === mount.id
     );
-
-    if (isCollected) {
+    console.log(isNowCollected)
+    if (isNowCollected) {
       const updatedCollected = collectedMounts.filter(
         favMount => favMount.id !== mount.id,
       );
       setCollectedMounts(updatedCollected);
     } else {
       setCollectedMounts(prevCollected => [...prevCollected, mount]);
-      console.log('Added to Favorites:', mount);
     }
+  };
+  
+  const openIndividualMountCard = (id) => {
+    setSelectedMountId(id);
   };
 
   return (
@@ -67,7 +56,7 @@ function App() {
               openIndividualMountCard={openIndividualMountCard}
               collectedMounts={collectedMounts}
               toggleCollectedMounts={toggleCollectedMounts}
-              isModalOpen={isModalOpen}
+              setSelectedMountId={setSelectedMountId}
             />
           }
         />
@@ -76,9 +65,7 @@ function App() {
           path="/mount/:id"
           element={
             <IndividualMountCard
-            openIndividualMountCard={openIndividualMountCard}
-            closeIndividualMountCard={closeIndividualMountCard}
-              selectedMountId={selectedMountId}
+              openIndividualMountCard={openIndividualMountCard}
               mounts={mounts}
               toggleCollectedMounts={toggleCollectedMounts}
               collectedMounts={collectedMounts}

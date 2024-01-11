@@ -1,13 +1,17 @@
 import './CollectedMountsDisplay.scss';
 import MountCard from '../MountCard/MountCard'
 import FireBird from '../../Images /firebird-mount.webp'
-
-// import NoCollectedMountsLogo from '../NoCollectedMountsLogo/NoCollectedMountsLogo'
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import FFXIVLogo from '../FFXIVLogo/FFXIVLogo';
+import { useParams } from 'react-router-dom';
 
-const CollectedMountsDisplay = ({ collectedMounts, toggleCollectedMounts, openIndividualMountCard }) => {
+const CollectedMountsDisplay = ({ collectedMounts,   toggleCollectedMounts, openIndividualMountCard, openModal }) => {
+  const { id } = useParams();
+  const selectedMountId = parseInt(id);
+
+  const selectedMount = collectedMounts.find(mount => mount.id === selectedMountId);
+
   const displayCollectedMounts = collectedMounts.map(mount => (
     <MountCard
       key={`${mount.id}-${mount.name}`}
@@ -18,6 +22,7 @@ const CollectedMountsDisplay = ({ collectedMounts, toggleCollectedMounts, openIn
       collectedMounts={collectedMounts}
       toggleCollectedMounts={toggleCollectedMounts}
       openIndividualMountCard={openIndividualMountCard}
+      openModal={openModal}
     />
   ));
 
