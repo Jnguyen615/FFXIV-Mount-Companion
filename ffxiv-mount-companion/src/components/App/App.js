@@ -1,4 +1,4 @@
-import { Routes, Route, useNavigate, useParams } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import MainDisplay from '../MainDisplay/MainDisplay';
 import ErrorPage from '../ErrorPage/ErrorPage';
@@ -12,6 +12,7 @@ function App() {
   const [collectedMounts, setCollectedMounts] = useState([]);
   const [selectedMountId, setSelectedMountId] = useState(null);
   const [filteredMounts, setFilteredMounts] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     retrieveMounts()
@@ -23,6 +24,11 @@ function App() {
         console.error('Error fetching mounts data:', error);
       });
   }, []);
+
+  const openIndividualMountPage = mountId => {
+    setSelectedMountId(mountId);
+    navigate(`/mount/${mountId}`);
+  };
 
   const toggleCollectedMounts = mount => {
     const isNowCollected = collectedMounts.some(
@@ -39,10 +45,6 @@ function App() {
     }
   };
 
-  const openIndividualMountCard = id => {
-    setSelectedMountId(id);
-  };
-
   return (
     <main className="app">
       <Routes>
@@ -57,6 +59,7 @@ function App() {
               toggleCollectedMounts={toggleCollectedMounts}
               setSelectedMountId={setSelectedMountId}
               setFilteredMounts={setFilteredMounts}
+              openIndividualMountPage={openIndividualMountPage}
             />
           }
         />
@@ -78,7 +81,7 @@ function App() {
             <CollectedMountDisplay
               collectedMounts={collectedMounts}
               toggleCollectedMounts={toggleCollectedMounts}
-              openIndividualMountCard={openIndividualMountCard}
+              openIndividualMountPage={openIndividualMountPage}
             />
           }
         />
