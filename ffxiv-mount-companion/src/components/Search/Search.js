@@ -1,12 +1,11 @@
-import './Search.scss'
-import { retrieveMounts } from '../../ApiCall'
-// Search.js
+import './Search.scss';
+import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 
 const Search = ({ onSearch }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
-  const handleSearch = (e) => {
+  const handleSearch = e => {
     const term = e.target.value;
     setSearchTerm(term);
     onSearch(term);
@@ -18,12 +17,16 @@ const Search = ({ onSearch }) => {
         type="text"
         id="search"
         placeholder="Search for a mount"
-        className='search-input'
+        className="search-input"
         value={searchTerm}
         onChange={handleSearch}
       />
     </div>
   );
+};
+
+Search.propTypes = {
+  onSearch: PropTypes.func.isRequired,
 };
 
 export default Search;

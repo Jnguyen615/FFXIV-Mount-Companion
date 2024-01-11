@@ -1,15 +1,15 @@
 import NavBar from '../NavBar/NavBar';
-import './IndividualMountCard.scss';
+import './IndividualMountPage.scss';
 import CollectedMountsIcon from '../CollectedMountsIcon/CollectedMountsIcon';
 import Header from '../Header/Header';
 import { useParams, Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const IndividualMountCard = ({
   mounts,
   collectedMounts,
-  toggleCollectedMounts
+  toggleCollectedMounts,
 }) => {
-  
   const { id } = useParams();
   const mountId = parseInt(id);
   const mount = mounts.find(mount => mount.id === mountId);
@@ -25,6 +25,7 @@ const IndividualMountCard = ({
       <NavBar />
       <div className="wrapper">
         <CollectedMountsIcon
+        className='fav-icon-indiv-mount-page'
           isCollected={isCollected}
           toggleCollectedMounts={handleToggleFavorite}
         />
@@ -47,6 +48,12 @@ const IndividualMountCard = ({
       )}
     </div>
   );
+};
+
+IndividualMountCard.propTypes = {
+  mounts: PropTypes.array.isRequired,
+  collectedMounts: PropTypes.array.isRequired,
+  toggleCollectedMounts: PropTypes.func.isRequired,
 };
 
 export default IndividualMountCard;

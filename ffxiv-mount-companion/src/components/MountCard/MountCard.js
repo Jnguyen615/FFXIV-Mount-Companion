@@ -1,4 +1,5 @@
 import './MountCard.scss';
+import PropTypes from 'prop-types';
 import CollectedMountIcon from '../CollectedMountsIcon/CollectedMountsIcon';
 
 const MountCard = ({
@@ -10,7 +11,6 @@ const MountCard = ({
   toggleCollectedMounts,
   openModal,
 }) => {
-
   const isCollected = collectedMounts.some(mount => mount.id === id);
 
   const handleImageClick = () => {
@@ -39,6 +39,16 @@ const MountCard = ({
       />
     </div>
   );
+};
+
+MountCard.propTypes = {
+  id: PropTypes.number.isRequired,
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  collectedMounts: PropTypes.array.isRequired,
+  toggleCollectedMounts: PropTypes.func.isRequired,
+  openModal: PropTypes.func.isRequired,
 };
 
 export default MountCard;
