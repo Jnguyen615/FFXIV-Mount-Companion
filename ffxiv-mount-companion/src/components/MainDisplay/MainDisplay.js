@@ -12,8 +12,8 @@ const MainDisplay = ({
   mounts,
   collectedMounts,
   toggleCollectedMounts,
-  setSelectedMountId,
   setFilteredMounts,
+  openIndividualMountPage,
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
@@ -21,11 +21,6 @@ const MainDisplay = ({
   const handleSearch = term => {
     setSearchTerm(term);
     setFilteredMounts(term);
-  };
-
-  const openModal = mountId => {
-    setSelectedMountId(mountId);
-    navigate(`/mount/${mountId}`);
   };
 
   const filteredMounts = mounts.filter(mount =>
@@ -42,7 +37,7 @@ const MainDisplay = ({
         description={mount.description}
         collectedMounts={collectedMounts}
         toggleCollectedMounts={id => toggleCollectedMounts(id)}
-        openModal={openModal}
+        openIndividualMountPage={openIndividualMountPage}
       />
     </div>
   ));
@@ -67,7 +62,8 @@ MainDisplay.propTypes = {
   collectedMounts: PropTypes.array.isRequired,
   toggleCollectedMounts: PropTypes.func.isRequired,
   setSelectedMountId: PropTypes.func.isRequired,
-  setFilteredMounts: PropTypes.func.isRequired
+  setFilteredMounts: PropTypes.func.isRequired,
+  openIndividualMountPage: PropTypes.func.isRequired,
 };
 
 export default MainDisplay;

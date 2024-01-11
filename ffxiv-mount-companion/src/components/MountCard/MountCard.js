@@ -9,12 +9,13 @@ const MountCard = ({
   description,
   collectedMounts,
   toggleCollectedMounts,
-  openModal,
+  openIndividualMountPage,
 }) => {
+  
   const isCollected = collectedMounts.some(mount => mount.id === id);
 
   const handleImageClick = () => {
-    openModal(id);
+    openIndividualMountPage(id);
   };
 
   const handleToggleCollected = () => {
@@ -48,6 +49,6 @@ MountCard.propTypes = {
   description: PropTypes.string.isRequired,
   collectedMounts: PropTypes.array.isRequired,
   toggleCollectedMounts: PropTypes.func.isRequired,
-  openModal: PropTypes.func.isRequired
+  openIndividualMountPage: PropTypes.func.isRequired
 };
 export default MountCard;
