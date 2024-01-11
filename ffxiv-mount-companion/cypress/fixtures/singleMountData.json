@@ -1,26 +1,32 @@
 {
-  "id": 334,
-  "name": "Spectral Statice",
-  "description": "Summon forth your spectral Statice, an avatar of the mischief-loving faerie from Aloalo Island.",
-  "enhanced_description": "This mischief-loving faerie was originally companion to a scholar, but her aether refused to disperse in the wake of her master's death. After enduring a dull existence for long years, she found in you someone who could provide her with excitement, and thus did she weave an avatar of herself to join you on adventures.",
-  "tooltip": "Most serious scholars consider it little more than a faerie tale. - Phillice",
-  "movement": "Airborne",
+  "id": 338,
+  "name": "Quaqua",
+  "description": "Summon forth your quaqua, a familiar hailing from the south sea isles that has either a permanent snarl or grin, depending on one's outlook on life.",
+  "enhanced_description": "Employed by a treasure hunter of Aloalo Island, this familiar was born of an early form of arcanima, an art which emerged in the south sea isles. The being's origin is attested by its predominantly wooden construction, a method which precedes the use of gemstones to create Carbuncles.",
+  "tooltip": "Them younglin's will be grinnin' ear to ear when they see what you've got in store! - Baenfaeld",
+  "movement": "Terrestrial",
   "seats": 1,
-  "order": 272,
-  "order_group": 107,
+  "order": 276,
+  "order_group": 108,
   "patch": "6.51",
-  "item_id": null,
-  "tradeable": false,
-  "owned": "8.6%",
-  "image": "https://ffxivcollect.com/images/mounts/large/334.png",
-  "icon": "https://ffxivcollect.com/images/mounts/small/334.png",
-  "bgm": "https://ffxivcollect.com/music/BGM_Ride_VVD05.ogg",
+  "item_id": 41499,
+  "tradeable": true,
+  "owned": "0.8%",
+  "image": "https://ffxivcollect.com/images/mounts/large/338.png",
+  "icon": "https://ffxivcollect.com/images/mounts/small/338.png",
+  "bgm": "https://ffxivcollect.com/music/BGM_Ride_VVD06.ogg",
   "sources": [
     {
-      "type": "Achievement",
-      "text": "Good-willed Hunting",
-      "related_type": "Achievement",
-      "related_id": 3347
+      "type": "V&C Dungeon",
+      "text": "Another Aloalo Island",
+      "related_type": "Instance",
+      "related_id": 37005
+    },
+    {
+      "type": "V&C Dungeon",
+      "text": "Trisassant - Old Sharlayan - 100 Aloalo Coins",
+      "related_type": null,
+      "related_id": null
     }
   ]
 }
