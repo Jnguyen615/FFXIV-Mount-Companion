@@ -10,7 +10,7 @@ import FFXIVLogo from '../FFXIVLogo/FFXIVLogo';
 const CollectedMountsDisplay = ({
   collectedMounts,
   toggleCollectedMounts,
-  openIndividualMountCard,
+  openIndividualMountPage,
 }) => {
   const { id } = useParams();
   const selectedMountId = parseInt(id);
@@ -18,6 +18,7 @@ const CollectedMountsDisplay = ({
   const selectedMount = collectedMounts.find(
     mount => mount.id === selectedMountId,
   );
+
 
   const displayCollectedMounts = collectedMounts.map(mount => (
     <MountCard
@@ -28,7 +29,7 @@ const CollectedMountsDisplay = ({
       description={mount.description}
       collectedMounts={collectedMounts}
       toggleCollectedMounts={toggleCollectedMounts}
-      openIndividualMountCard={openIndividualMountCard}
+      openIndividualMountPage={openIndividualMountPage}
     />
   ));
 
@@ -56,7 +57,7 @@ const CollectedMountsDisplay = ({
 CollectedMountsDisplay.propTypes = {
   collectedMounts: PropTypes.array.isRequired,
   toggleCollectedMounts: PropTypes.func.isRequired,
-  openIndividualMountCard: PropTypes.func.isRequired,
+  openIndividualMountPage: PropTypes.func.isRequired
 };
 
 export default CollectedMountsDisplay;
