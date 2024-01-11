@@ -1,8 +1,9 @@
 import './CollectedMountsDisplay.scss';
 import { useParams } from 'react-router-dom';
+import { useEffect } from 'react'
 import PropTypes from 'prop-types';
 import MountCard from '../MountCard/MountCard';
-import FireBird from '../../Images /firebird-mount.webp';
+import Firebird from '../Firebird/Firebird'
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import FFXIVLogo from '../FFXIVLogo/FFXIVLogo';
@@ -19,6 +20,10 @@ const CollectedMountsDisplay = ({
     mount => mount.id === selectedMountId,
   );
 
+  // useEffect(() => {
+  //   localStorage.setItem('collectedMounts', JSON.stringify(collectedMounts))
+    
+  // }, [collectedMounts]);
 
   const displayCollectedMounts = collectedMounts.map(mount => (
     <MountCard
@@ -43,7 +48,7 @@ const CollectedMountsDisplay = ({
       </Link>
       {!displayCollectedMounts.length && (
         <div>
-          <img src={FireBird} className="fire-bird" alt="firebird"></img>
+          <Firebird />
           <p className="no-favorites">
             You don't have any mounts yet, add some!
           </p>
