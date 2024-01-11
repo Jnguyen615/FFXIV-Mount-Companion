@@ -13,12 +13,14 @@ const MainDisplay = ({
   collectedMounts,
   toggleCollectedMounts,
   setSelectedMountId,
+  setFilteredMounts,
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
 
   const handleSearch = term => {
     setSearchTerm(term);
+    setFilteredMounts(term);
   };
 
   const openModal = mountId => {
@@ -50,7 +52,11 @@ const MainDisplay = ({
       <Header />
       <FFXIVLogo />
       <NavBar />
-      <Search onSearch={handleSearch} />
+      <Search
+        onSearch={handleSearch}
+        mounts={mounts}
+        setFilteredMounts={setFilteredMounts}
+      />
       <div className="mounts-container">{mountCards}</div>
     </main>
   );
@@ -61,6 +67,7 @@ MainDisplay.propTypes = {
   collectedMounts: PropTypes.array.isRequired,
   toggleCollectedMounts: PropTypes.func.isRequired,
   setSelectedMountId: PropTypes.func.isRequired,
+  setFilteredMounts: PropTypes.func.isRequired
 };
 
 export default MainDisplay;
