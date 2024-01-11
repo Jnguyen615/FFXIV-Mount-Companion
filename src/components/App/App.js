@@ -12,12 +12,15 @@ function App() {
   const [collectedMounts, setCollectedMounts] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedMountId, setSelectedMountId] = useState(null);
+  const [filteredMounts, setFilteredMounts] = useState([]); // New state for filtered mounts
+
   const navigate = useNavigate();
 
   useEffect(() => {
     retrieveMounts()
       .then(data => {
         setMounts(data);
+        setFilteredMounts(data)
       })
       .catch(error => {
         console.error('Error fetching mounts data:', error);
@@ -28,7 +31,7 @@ function App() {
   const toggleCollectedMounts = (mount) => {
     const isNowCollected = collectedMounts.some(favMount => favMount.id === mount.id
     );
-    console.log(isNowCollected)
+
     if (isNowCollected) {
       const updatedCollected = collectedMounts.filter(
         favMount => favMount.id !== mount.id,
@@ -41,6 +44,14 @@ function App() {
   
   const openIndividualMountCard = (id) => {
     setSelectedMountId(id);
+  };
+
+  const handleSearch = (term) => {
+    // Filter mounts based on the search term
+    const filtered = mounts.filter((mount) =>
+      mount.name.toLowerCase().includes(term.toLowerCase())
+    );
+    setFilteredMounts(filtered);
   };
 
   return (
@@ -57,6 +68,7 @@ function App() {
               collectedMounts={collectedMounts}
               toggleCollectedMounts={toggleCollectedMounts}
               setSelectedMountId={setSelectedMountId}
+              handleSearch={handleSearch}
             />
           }
         />
