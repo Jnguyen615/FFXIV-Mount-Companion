@@ -2,6 +2,7 @@ import NavBar from '../NavBar/NavBar';
 import './IndividualMountPage.scss';
 import CollectedMountsIcon from '../CollectedMountsIcon/CollectedMountsIcon';
 import Header from '../Header/Header';
+import FFXIVLogo from '../FFXIVLogo/FFXIVLogo'
 import { useParams, Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
@@ -22,6 +23,7 @@ const IndividualMountCard = ({
   return (
     <div className="mount-page">
       <Header />
+      <FFXIVLogo />
       <NavBar />
       <div className="wrapper">
         <CollectedMountsIcon

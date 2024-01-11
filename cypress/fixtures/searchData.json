@@ -1,0 +1,32 @@
+{
+  "id": 177,
+  "name": "Fat Black Chocobo",
+  "description": "Summon forth your fat black chocobo and marvel at its flurry of pitch-dark plumage.",
+  "enhanced_description": "According to those familiar with this prodigious poultry's journey from flightless fledgling to full-blown fowl, the cloudkin achieved its staggering girth after several summers of gluttonously gulping chunks of charred chicken. Though, many speculate that the chocobo is, in fact, no chocobo at all, but a heretofore unseen spirit (or demon) of Dravania's dark wood.",
+  "tooltip": "Black winds bring terrible news!    - Linu Vali",
+  "movement": "Terrestrial",
+  "seats": 1,
+  "order": 134,
+  "order_group": 2,
+  "patch": "4.45",
+  "item_id": null,
+  "tradeable": false,
+  "owned": "10%",
+  "image": "https://ffxivcollect.com/images/mounts/large/177.png",
+  "icon": "https://ffxivcollect.com/images/mounts/small/177.png",
+  "bgm": "https://ffxivcollect.com/music/BGM_Ride_DEBUChocobo.ogg",
+  "sources": [
+    {
+      "type": "Premium",
+      "text": "In-Game Item Campaign",
+      "related_type": null,
+      "related_id": null
+    },
+    {
+      "type": "Limited",
+      "text": "Twitch Campaign",
+      "related_type": null,
+      "related_id": null
+    }
+  ]
+}
