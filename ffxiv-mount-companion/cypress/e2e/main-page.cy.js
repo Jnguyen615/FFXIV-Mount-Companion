@@ -46,6 +46,7 @@ describe('Should visit the main page', () => {
       });
     cy.get('.mounts-container').children().should('have.length', 5);
   });
+  
   it('should click to collect a mount and navigate to the my collected mounts page and be able to remove a collected mount', () => {
     cy.visit('http://localhost:3000/main')
       .get('.mounts-container')
@@ -56,7 +57,8 @@ describe('Should visit the main page', () => {
         cy.contains(
           'p',
           "Summon forth your quaqua, a familiar hailing from the south sea isles that has either a permanent snarl or grin, depending on one's outlook on life.",
-        )
+          )
+          .get('img').should('exist')
           .get('svg')
           .should('exist')
           .click();
