@@ -4,6 +4,7 @@ import MountCard from '../MountCard/MountCard';
 import Header from '../Header/Header';
 import FFXIVLogo from '../FFXIVLogo/FFXIVLogo';
 import Search from '../Search/Search';
+import ScrollFollowButton from '../ScrollFollowButton/ScrollFollowButton'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -47,6 +48,7 @@ const MainDisplay = ({
       <Header />
       <FFXIVLogo />
       <NavBar />
+      <ScrollFollowButton />
       <Search
         onSearch={handleSearch}
         mounts={mounts}
