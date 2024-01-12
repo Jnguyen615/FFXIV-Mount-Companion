@@ -7,6 +7,7 @@ import Firebird from '../Firebird/Firebird'
 import { Link } from 'react-router-dom';
 import Header from '../Header/Header';
 import FFXIVLogo from '../FFXIVLogo/FFXIVLogo';
+import ScrollFollowButton from '../ScrollFollowButton/ScrollFollowButton';
 
 const CollectedMountsDisplay = ({
   collectedMounts,
@@ -42,6 +43,7 @@ const CollectedMountsDisplay = ({
     <main className="collected-mounts-page">
       <Header />
       <FFXIVLogo />
+      <ScrollFollowButton />
       <h1 className="collected-mounts-title">My Mounts</h1>
       <Link to="/main">
         <button className="back-to-all-btn">Back To All Mounts</button>
