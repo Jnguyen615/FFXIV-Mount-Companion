@@ -3,9 +3,16 @@
   flex-direction: column;
   background-color: black;
   height: 100vh;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .error-page-text {
   color: white;
   font-family: 'Righteous', 'san-serif';
+  text-align: center;
+}
+
+.back-from-error-page {
+  margin-left: 43%;
 }

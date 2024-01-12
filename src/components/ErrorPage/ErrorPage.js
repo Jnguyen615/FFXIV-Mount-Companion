@@ -8,7 +8,7 @@ const ErrorPage = () => {
       <h1 className='error-page-text'>Oops! Something went wrong, please go back.</h1>
       <ErrorPageImage />
       <Link to="/main">
-        <button>Back to All Mounts</button>
+        <button className='back-from-error-page'>Back to All Mounts</button>
       </Link>
     </main>
   );
