@@ -12,14 +12,17 @@ const Search = ({ mounts, setFilteredMounts, onSearch }) => {
   };
 
   useEffect(() => {
-    const lowerCaseTerm = searchTerm.toLowerCase();
+    const lowerCaseTerms = searchTerm.toLowerCase().split(' ');
   
     const filteredMounts = searchTerm
-      ? mounts.filter(mount => mount.name.toLowerCase().includes(lowerCaseTerm))
+      ? mounts.filter(mount => {
+          const mountName = mount.name.toLowerCase();
+          return lowerCaseTerms.every(term => mountName.includes(term));
+        })
       : mounts;
   
     setFilteredMounts(filteredMounts);
-  }, [searchTerm, setFilteredMounts]);
+  }, [searchTerm, setFilteredMounts, mounts]);
   
 
   return (
@@ -35,6 +38,7 @@ const Search = ({ mounts, setFilteredMounts, onSearch }) => {
     </div>
   );
 };
+
 
 Search.propTypes = {
   mounts: PropTypes.array.isRequired,
