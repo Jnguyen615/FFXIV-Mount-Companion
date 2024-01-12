@@ -1,10 +1,11 @@
 .logo-page-header {
   background-color: black;
-  height: 80vh;
+  height: 100vh;
   overflow: hidden;
   display: flex;
   align-items: center;
-  flex-direction: column
+  flex-direction: column;
+  width: 105vw;
 }
 
 .page-name {
