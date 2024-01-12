@@ -26,38 +26,31 @@ function App() {
   }, []);
 
   useEffect(() => {
-    localStorage.setItem('collectedMounts', JSON.stringify(collectedMounts))
-    
-  }, [collectedMounts]);
-  
-  useEffect(() => {
     const storedCollectedMounts = localStorage.getItem('collectedMounts');
     if (storedCollectedMounts) {
       setCollectedMounts(JSON.parse(storedCollectedMounts));
     }
   }, []);
-
-
+  
   const openIndividualMountPage = mountId => {
     setSelectedMountId(mountId);
     navigate(`/mount/${mountId}`);
   };
-
-  const toggleCollectedMounts = mount => {
-    const isNowCollected = collectedMounts.some(
-      favMount => favMount.id === mount.id,
-    );
-
+  
+  const toggleCollectedMounts = (mount) => {
+    const isNowCollected = collectedMounts.some((favMount) => favMount.id === mount.id);
+  
     if (isNowCollected) {
-      const updatedCollected = collectedMounts.filter(
-        favMount => favMount.id !== mount.id,
-      );
+      const updatedCollected = collectedMounts.filter((favMount) => favMount.id !== mount.id);
       setCollectedMounts(updatedCollected);
+      localStorage.setItem('collectedMounts', JSON.stringify(updatedCollected));
     } else {
-      setCollectedMounts(prevCollected => [...prevCollected, mount]);
+      setCollectedMounts((prevCollected) => [...prevCollected, mount]);
+      localStorage.setItem('collectedMounts', JSON.stringify([...collectedMounts, mount]));
     }
   };
-
+      
+   
   return (
     <main className="app">
       <Routes>
