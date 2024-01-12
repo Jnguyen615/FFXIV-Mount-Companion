@@ -14,17 +14,6 @@ const CollectedMountsDisplay = ({
   toggleCollectedMounts,
   openIndividualMountPage,
 }) => {
-  const { id } = useParams();
-  const selectedMountId = parseInt(id);
-
-  const selectedMount = collectedMounts.find(
-    mount => mount.id === selectedMountId,
-  );
-
-  // useEffect(() => {
-  //   localStorage.setItem('collectedMounts', JSON.stringify(collectedMounts))
-    
-  // }, [collectedMounts]);
 
   const displayCollectedMounts = collectedMounts.map(mount => (
     <MountCard

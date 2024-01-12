@@ -12,14 +12,12 @@ const Search = ({ mounts, setFilteredMounts, onSearch }) => {
   };
 
   useEffect(() => {
-    console.log('Search Term:', searchTerm);
     const lowerCaseTerm = searchTerm.toLowerCase();
   
     const filteredMounts = searchTerm
       ? mounts.filter(mount => mount.name.toLowerCase().includes(lowerCaseTerm))
       : mounts;
   
-    console.log('Filtered Mounts:', filteredMounts);
     setFilteredMounts(filteredMounts);
   }, [searchTerm, setFilteredMounts]);
   
