@@ -1,4 +1,4 @@
-<h1 align=center> ❓ FFXIV Mount Companion ❓<h1> 
+<h1 align=center> 🦙 FFXIV Mount Companion 🦙<h1> 
 <div align=center> 
 
 <a href="https://ffxiv-mount-companion-m04osmlsr-jen-nguyens-projects.vercel.app/" style="font-size: 30px;">Deployed Link</a>
