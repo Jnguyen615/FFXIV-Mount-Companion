@@ -1,23 +1,19 @@
-.search {
-  color: #fcf302;
-  background-color: black;
-  display:flex;
-  justify-content: center;
+@import '../../Styles/variables.scss';
+@import '../../Styles/mixins.scss';
 
+.search {
+  color: $primaryYellow;
+  background-color: $primaryBlack;
+  display: flex;
+  justify-content: center;
 }
 
 .search-input {
-  background-color: black;
-  font-size: 1.57em;
-  margin-bottom: 1%;
-  color: yellow;
-  font-family: 'Righteous', 'sans-serif';
-  border-radius: 7px
+  @include search-input-style
 }
 
 @media screen and (max-width: 455px) {
   .search-input {
-    font-size: 1em
+    font-size: 1em;
   }
-  
 }

@@ -37,17 +37,17 @@
 3. Run the command  `npm install` to install dependencies.
 4. Run the command `npm start` to start the server.
 5. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-6. You can also view the project <a href="https://trivia-troll.vercel.app/">here</a>.
+6. You can also view the project <a href="https://ffxiv-mount-companion.vercel.app
+">
+
+here</a>.
 7. Use control C to stop the server.
 8. To test, run the command `npx cypress open`.
 
 <h2  id="preview"> 🎥 Preview 📱 </h2>
 
-<img width="1382" alt="Screenshot 2024-01-12 at 7 50 33 PM" src="https://github.com/Jnguyen615/FFXIV-Mount-Companion/assets/119434450/e61390bc-06b1-4528-ac6a-067d2e0dfab5">
+![Gif](https://github.com/Jnguyen615/FFXIV-Mount-Companion/assets/119434450/0bf59346-8245-4bc9-9dd5-8c2dacd1a149)
 
-<img width="1347" alt="Screenshot 2024-01-12 at 7 51 40 PM" src="https://github.com/Jnguyen615/FFXIV-Mount-Companion/assets/119434450/8dc95b6c-652a-4dc8-99d9-03c65f1779b0">
-
-<img width="1382" alt="Screenshot 2024-01-12 at 7 52 08 PM" src="https://github.com/Jnguyen615/FFXIV-Mount-Companion/assets/119434450/c78c64f9-fb72-47a0-b133-b29bb440cba5">
 
 
 <img width="299" alt="Screenshot 2024-01-12 at 8 02 01 PM" src="https://github.com/Jnguyen615/FFXIV-Mount-Companion/assets/119434450/e8de2666-aea0-4807-bd6b-23be339f426b">
@@ -62,19 +62,20 @@
 
 - Creating a full application is a short amount of time
 
+
 <h2 id="wins">🏆 Wins </h2>
   
  - Getting a better understanding of Cypress.
 
- - Figuring out repsonsive design
+ - Figuring out responsive design
 
- - Getting a better understanding of React and how to work wiht components and use them where needed
+ - Getting a better understanding of React and how to work with components and import them where needed
 
- 🏆 Incorporating SASS variables for styles 
+ - Incorporating SASS variables and mixins for managing common styles 
 
 <h2 id="future-ideas">💡 Future Ideas </h2>
 
-- Add new pages for collecting minions 
+- Add new pages/api call/etc for collecting minions as well 
 
 - Allowing users to shuffle their collected mount cards around in a certain order 
 

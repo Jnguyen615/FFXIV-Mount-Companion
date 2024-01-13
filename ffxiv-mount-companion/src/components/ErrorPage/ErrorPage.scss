@@ -1,43 +1,40 @@
+@import '../../Styles/variables.scss';
+@import '../../Styles/mixins.scss';
+
 .error-page {
-  display: flex;
+  @include flex-container;
   flex-direction: column;
-  background-color: black;
+  background-color: $primaryBlack;
   height: 100vh;
-  flex-wrap: wrap;
   justify-content: center;
-}
 
-.error-page-text {
-  color: white;
-  font-family: 'Righteous', 'san-serif';
-  text-align: center;
-}
-
-.back-from-error-page {
-  margin-left: 43%;
-}
-
-
-@media screen and (max-width: 455px) {
-  .hydra {
-    height: 110px;
+  .error-page-text {
+    color: white;
+    font-family: $mainFont;
+    text-align: center;
   }
-}
 
-@media screen and (max-width: 600px) {
-  .ffxiv-logo {
-    height: 150px;
-  }
   .back-from-error-page {
-    margin-left: 30%;
+    margin-left: 43%;
   }
-}
 
-@media screen and (max-width: 750px) {
-  .ffxiv-logo {
-    height: 150px;
+  @include mobile-size(455px) {
+    .hydra {
+      height: 110px;
+    }
   }
-  .back-from-error-page {
-    margin-left: 30%;
+
+  @include mobile-size(600px) {
+    .ffxiv-logo {
+      height: 150px;
+      margin-left: 30%;
+    }
+  }
+
+  @include mobile-size(750px) {
+    .ffxiv-logo {
+      height: 150px;
+      margin-left: 30%;
+    }
   }
 }

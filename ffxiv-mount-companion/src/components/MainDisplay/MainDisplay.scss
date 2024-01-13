@@ -1,43 +1,43 @@
+@import '../../Styles/variables.scss';
+
 .mounts-container {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 20px;
-  background-color: black;
+  background-color: $primaryBlack;
 }
 
 @media screen and (max-width: 455px) {
   .mounts-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2px
+    gap: 2px;
   }
 }
 
 @media screen and (max-width: 1275px) {
   .mounts-container {
     grid-template-columns: repeat(4, 1fr);
-    gap: 2px
+    gap: 2px;
   }
-  
 }
 
 @media screen and (max-width: 1000px) {
   .mounts-container {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2px
+    gap: 2px;
   }
-  
 }
+
 @media screen and (max-width: 850px) {
   .mounts-container {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2px
+    gap: 2px;
   }
-  
 }
 
 @media screen and (max-width: 550px) {
   .mounts-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2px
+    gap: 2px;
   }
 }
