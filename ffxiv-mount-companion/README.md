@@ -58,24 +58,24 @@
 
  <h2 id="challenges">💪🏻 Challenges </h2>
 
-💪🏻 Implementing the search functionality how I wanted it 
+- Implementing the search functionality how I wanted it 
 
-💪🏻 Creating a full application is a short amount of time
+- Creating a full application is a short amount of time
 
 <h2 id="wins">🏆 Wins </h2>
   
- 🏆 Getting a better understanding of Cypress.
+ - Getting a better understanding of Cypress.
 
- 🏆 Figuring out repsonsive design
+ - Figuring out repsonsive design
 
- 🏆 Getting a better understanding of React and how to work wiht components and use them where needed
+ - Getting a better understanding of React and how to work wiht components and use them where needed
 
  🏆 Incorporating SASS variables for styles 
 
 <h2 id="future-ideas">💡 Future Ideas </h2>
 
-🔮 Add new pages for collecting minions 
+- Add new pages for collecting minions 
 
-🔮 Allowing users to shuffle their collected mount cards around in a certain order 
+- Allowing users to shuffle their collected mount cards around in a certain order 
 
-🔮 Saving mounts as collected AND being able to favorite them 
+- Saving mounts as collected AND being able to favorite them 
