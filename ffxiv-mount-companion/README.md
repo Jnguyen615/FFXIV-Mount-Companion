@@ -5,11 +5,11 @@
 
 
 ![Tests](https://badgen.net/badge/tests/passing/green?icon=github)
-## Contributors 👩🏻‍💻
+### Contributors 👩🏻‍💻
 
 [Jen Nguyen](http://github.com/jnguyen615)
 
-## 📂 Tech Stack 
+### 📂 Tech Stack 
 <img src="https://img.shields.io/badge/react%20-%236a0dad.svg?&style=for-the-badge&logo=react&logoColor=%8f4db2"/>
 <img src="https://img.shields.io/badge/React_Router-6a0dad?style=for-the-badge&logo=react-router&logoColor=white"/>
 <img src="https://img.shields.io/badge/Cypress-39FF14?style=for-the-badge&logo=cypress&logoColor=white"/>
@@ -18,7 +18,7 @@
 <img src="https://img.shields.io/badge/Sass-6a0dad?style=for-the-badge&logo=sass&logoColor=white"/>
 </div>
 
-## 📚 Table of Contents
+### 📚 Table of Contents
 
 - [Overview](#overview)
 - [Getting Started](#getting-started)
