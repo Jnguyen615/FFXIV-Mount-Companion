@@ -46,3 +46,39 @@
     opacity: 1;
   }
 }
+
+@media screen and (max-width: 375px) {
+  .mount-card-image {
+    width: 50%
+  }
+  .mount-description {
+    font-size: .7em
+  }
+  
+}
+
+@media screen and (max-width: 455px) {
+  .mount-card-image {
+    width: 75%
+  }
+  .mount-description {
+    font-size: 1em
+  }
+  
+}
+
+@media screen and (max-width: 1000px) {
+  .mount-card-image {
+    width: 85%
+  }
+  .mount-description {
+    font-size: 1.2em
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .mount-card-img {
+    height: 90%;
+  }
+  
+}

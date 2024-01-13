@@ -14,3 +14,10 @@
   font-family: 'Righteous', 'sans-serif';
   border-radius: 7px
 }
+
+@media screen and (max-width: 455px) {
+  .search-input {
+    font-size: 1em
+  }
+  
+}

@@ -16,3 +16,28 @@
 .back-from-error-page {
   margin-left: 43%;
 }
+
+
+@media screen and (max-width: 455px) {
+  .hydra {
+    height: 110px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .ffxiv-logo {
+    height: 150px;
+  }
+  .back-from-error-page {
+    margin-left: 30%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .ffxiv-logo {
+    height: 150px;
+  }
+  .back-from-error-page {
+    margin-left: 30%;
+  }
+}
