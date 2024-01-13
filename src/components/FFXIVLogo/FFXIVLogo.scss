@@ -11,3 +11,14 @@
 }
 
 
+@media screen and (max-width: 455px) {
+  .ffxiv-logo {
+    height: 110px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .ffxiv-logo {
+    height: 150px;
+  }
+}

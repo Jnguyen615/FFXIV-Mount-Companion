@@ -1,4 +1,17 @@
 .chocobo-icon {
   height: 90px;
-  margin-left: 10px
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 455px) {
+  .chocobo-icon {
+    height: 40px;
+  }
+}
+  
+@media screen and (max-width: 750px) {
+  .chocobo-icon {
+    height: 70px;
+  }
+  
 }
