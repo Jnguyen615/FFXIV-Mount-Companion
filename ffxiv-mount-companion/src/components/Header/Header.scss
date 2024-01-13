@@ -1,35 +1,40 @@
+@import '../../Styles/variables.scss';
+
 header {
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
-  background-color: #333;
+  background-color: $darkGray;
 }
 
 .app-title {
-  font-family: 'Righteous', sans-serif;
+  font-family: $mainFont;
   font-size: 4em;
-  color: #fcf302; 
-  text-shadow: 0 0 10px #fcf302, 0 0 20px #fcf302, 0 0 30px #fcf302, 0 0 40px #333, 0 0 70px #333, 0 0 80px #333, 0 0 100px #333, 0 0 150px #333;
+  color: $primaryYellow;
+  text-shadow: 0 0 10px $primaryYellow, 0 0 20px $primaryYellow,
+    0 0 30px $primaryYellow, 0 0 40px $darkGray, 0 0 70px $darkGray,
+    0 0 80px $darkGray, 0 0 100px $darkGray, 0 0 150px $darkGray;
   animation: glow 3s infinite alternate;
-  margin-right: 20px
+  margin-right: 20px;
 }
 
 @keyframes glow {
   to {
-    text-shadow: 0 0 5px #fcf302, 0 0 10px #fcf302, 0 0 10px #fcf302, 0 0 20px #333, 0 0 35px #333, 0 0 40px #333, 0 0 50px #333, 0 0 75px #333;
+    text-shadow: 0 0 5px $primaryYellow, 0 0 10px $primaryYellow,
+      0 0 10px $primaryYellow, 0 0 20px $darkGray, 0 0 35px $darkGray,
+      0 0 40px $darkGray, 0 0 50px $darkGray, 0 0 75px $darkGray;
   }
 }
 
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 478x) {
   .app-title {
-    font-size: 1em
+    font-size: 1em;
   }
 }
 
 @media screen and (max-width: 750px) {
   .app-title {
-    font-size: 1.5em
+    font-size: 1.5em;
   }
-  
 }

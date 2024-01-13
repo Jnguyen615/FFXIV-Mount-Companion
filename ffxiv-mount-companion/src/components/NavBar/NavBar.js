@@ -12,5 +12,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-//will import in the allMountsDisplay component

@@ -1,9 +1,11 @@
+@import '../../Styles/variables.scss';
+
 .scroll-follow-button {
-  background-color: #fcf302;
-  color: black;
+  background-color: $primaryYellow;
+  color: $primaryBlack;
   padding: 10px 20px;
   font-size: 1.7em;
-  font-family: 'Righteous', 'sans-serif';
+  font-family: $mainFont;
   border: none;
   border-radius: 5px;
   cursor: pointer;

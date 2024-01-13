@@ -1,18 +1,16 @@
-* {
-  font-family: 'Righteous', 'sans-serif'
-}
+@import '../../Styles/variables.scss';
 
 .wrapper {
   display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    width: 99%
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 99%;
 }
 
 .mount-page {
-  background-color: black;
-  height: 100vh
+  background-color: $primaryBlack;
+  height: 100vh;
 }
 
 .mount-container {
@@ -20,38 +18,33 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: $primaryBlack;
   width: 100%;
 }
 
 .modal-image {
-  max-width: 25%; 
+  max-width: 25%;
 }
 
 .mount-name {
-  opacity: 1
+  opacity: 1;
 }
 
 .enhanced-description {
-  color: white;
+  color: $cream;
   font-size: 1.5em;
   margin-left: 1%;
-  width: 85%
+  width: 85%;
 }
 
 .mount-info {
   display: flex;
   justify-content: space-around;
-  color: white;
+  color: $cream;
   width: 100%;
   font-size: 1.5em;
 }
 
 .collected-mount-icon {
   margin-left: 7%;
-
-}
-
-.collected-mounts-container {
-  background-color: black
 }

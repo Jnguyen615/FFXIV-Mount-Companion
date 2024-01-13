@@ -1,36 +1,23 @@
+@import '../../Styles/variables.scss';
+@import '../../Styles/mixins.scss';
+
 .nav-bar {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 10px;
-  background-color: black
+  background-color: $primaryBlack;
 }
 
 button {
-  background-color: #fcf302;
-  color: black;
-  padding: 10px 20px;
-  font-family: 'Righteous', 'sans-serif';
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-size: 1.7em;
-}
-
-button:hover {
-  background-color: black;
-  color: #fcf302;
-  transform: translateY(-2px);
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  @include button-style
 }
 
 @media screen and (max-width: 455px) {
   button {
-    font-size: 1em
+    font-size: 1em;
   }
   .nav-bar {
-    padding: 5px
+    padding: 5px;
   }
-  
 }

@@ -1,5 +1,7 @@
+@import '../../Styles/variables.scss';
+
 .logo-page-header {
-  background-color: black;
+  background-color: $primaryBlack;
   height: 100vh;
   overflow: hidden;
   display: flex;
@@ -10,8 +12,8 @@
 
 .page-name {
   color: white;
-  font-family: 'Righteous', 'sans-serif';
-  size: 2em
+  font-family: $mainFont;
+  size: 2em;
 }
 
 .black-chocobo {
@@ -19,12 +21,12 @@
   height: 25em;
 }
 
-@media screen and (max-width:455px) {
+@media screen and (max-width: 455px) {
   .black-chocobo {
     height: 20em;
   }
   .page-name {
-    font-size: 1.5em
+    font-size: 1.5em;
   }
   .click-me {
     font-size: 1em;

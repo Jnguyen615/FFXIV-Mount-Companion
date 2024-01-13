@@ -1,40 +1,43 @@
+@import '../../Styles/variables.scss';
+
 .mount-card {
   height: 100%;
   width: 90%;
-  display:flex;
+  display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: space-between;
 
   align-items: center;
-  box-shadow: 3px 3px 3px #fcf302;
-  border: 1px solid yellow;
-  background-color: black;
-  transition: transform 0.3s ease-in-out; 
+  box-shadow: 3px 3px 3px $primaryYellow;
+  border: 1px solid $primaryYellow;
+  background-color: $primaryBlack;
+  transition: transform 0.3s ease-in-out;
   transform-origin: center;
 }
 
 .mount-card:hover {
-  transform: rotate(-2deg); 
+  transform: rotate(-2deg);
 }
 
 .mount-description {
   font-size: 1.5em;
   text-align: center;
-  color: #EDE7E3;
+  color: $cream;
   margin-left: 5px;
   opacity: 0;
-  transition: opacity 0.5s ease; 
+  transition: opacity 0.5s ease;
 }
 
 .mount-name {
-  color: white;
+  color: $cream;
   font-size: 2em;
-  text-align: center
+  text-align: center;
 }
 
-.mount-card:hover h3, .mount-card:hover .mount-description {
-  opacity: 1; 
+.mount-card:hover h3,
+.mount-card:hover .mount-description {
+  opacity: 1;
 }
 
 .fav-icon {
@@ -49,30 +52,28 @@
 
 @media screen and (max-width: 375px) {
   .mount-card-image {
-    width: 50%
+    width: 50%;
   }
   .mount-description {
-    font-size: .7em
+    font-size: 0.7em;
   }
-  
 }
 
 @media screen and (max-width: 455px) {
   .mount-card-image {
-    width: 75%
+    width: 75%;
   }
   .mount-description {
-    font-size: 1em
+    font-size: 1em;
   }
-  
 }
 
 @media screen and (max-width: 1000px) {
   .mount-card-image {
-    width: 85%
+    width: 85%;
   }
   .mount-description {
-    font-size: 1.2em
+    font-size: 1.2em;
   }
 }
 
@@ -80,5 +81,4 @@
   .mount-card-img {
     height: 90%;
   }
-  
 }

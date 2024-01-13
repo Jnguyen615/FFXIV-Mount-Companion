@@ -1,0 +1,42 @@
+@mixin mobile-size($size) {
+  @media screen and (max-width: $size) {
+    @content;
+  }
+}
+
+@mixin flex-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin button-style {
+  background-color: $primaryYellow;
+  color: $primaryBlack;
+  padding: 10px 20px;
+  font-family: 'Righteous', 'sans-serif';
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1.7em;
+
+  &:hover {
+    background-color: $primaryBlack;
+    color: $primaryYellow;
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@mixin search-input-style {
+  background-color: $primaryBlack;
+  font-size: 1.57em;
+  margin-bottom: 1%;
+  color: $primaryYellow;
+  font-family: $mainFont;
+  border-radius: 7px;
+
+  @media screen and (max-width: 455px) {
+    font-size: 1em;
+  }
+}
