@@ -5,7 +5,7 @@ const NavBar = () => {
   return (
     <div className="nav-bar">
       <Link to="/collectedmounts">
-        <button>My Mounts</button>
+        <button className='my-mounts-btn'>My Mounts</button>
       </Link>
     </div>
   );

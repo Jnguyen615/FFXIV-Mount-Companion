@@ -63,7 +63,7 @@ describe('Should visit the main page', () => {
           .should('exist')
           .click();
       });
-    cy.get('button').click().url().should('contain', '/collectedmounts');
+    cy.get('.my-mounts-btn').click().url().should('contain', '/collectedmounts');
     cy.get('.collected-mounts-container').children().should('have.length', 1);
     cy.get('.collected-mounts-container')
       .children()
