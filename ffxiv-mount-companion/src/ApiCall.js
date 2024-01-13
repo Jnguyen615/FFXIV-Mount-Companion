@@ -8,7 +8,11 @@ export const retrieveMounts = async () => {
     });
 
     if (!response.ok) {
-      throw new Error("Oops! Something went wrong");
+      if (response.status === 404) {
+        throw new Error("Mounts not found: The requested resource could not be found");
+      } else {
+        throw new Error("Oops! Something went wrong");
+      }
     }
 
     const responseData = await response.json();

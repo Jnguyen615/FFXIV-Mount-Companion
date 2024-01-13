@@ -74,7 +74,7 @@ describe('Should search for a mount', () => {
             .click();
         });
     });
-    cy.get('button')
+    cy.get('.my-mounts-btn')      
       .click()
       .url()
       .should('contain', '/collectedmounts')
