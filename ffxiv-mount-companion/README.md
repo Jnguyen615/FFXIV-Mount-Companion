@@ -79,3 +79,4 @@
 - Allowing users to shuffle their collected mount cards around in a certain order 
 
 - Saving mounts as collected AND being able to favorite them 
+
