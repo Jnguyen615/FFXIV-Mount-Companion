@@ -1,7 +1,7 @@
 <h1 align=center> 🦙 FFXIV Mount Companion 🦙<h1> 
 <div align=center> 
 
-<a href="https://ffxiv-mount-companion-m04osmlsr-jen-nguyens-projects.vercel.app/" style="font-size: 30px;">Deployed Link</a>
+<a href="https://ffxiv-mount-companion.vercel.app/" style="font-size: 30px;">Deployed Link</a>
 
 
 ![Tests](https://badgen.net/badge/tests/passing/green?icon=github)
@@ -45,8 +45,6 @@
 <h2  id="preview"> 🎥 Preview 📱 </h2>
 
 ![giphy](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHd5Yzh6eTRhMDJjd2Fobms2dTkzN2tqY2wxdndkZ2dibnVwaDJwbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KOPphsWiThdRthWlST/giphy.gif)
-
-
 
 <img width="299" alt="Screenshot 2024-01-12 at 8 02 01 PM" src="https://github.com/Jnguyen615/FFXIV-Mount-Companion/assets/119434450/e8de2666-aea0-4807-bd6b-23be339f426b">
 
