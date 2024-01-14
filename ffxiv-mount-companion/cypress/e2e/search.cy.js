@@ -13,7 +13,7 @@ describe('Should search for a mount', () => {
       .should('have.length', 5);
 
     cy.get('.search').type('island');
-
+    
     cy.get('.mounts-container')
       .children()
       .should('have.length', 2)
@@ -68,7 +68,7 @@ describe('Should search for a mount', () => {
             .click();
         });
     });
-    cy.get('.my-mounts-btn')      
+    cy.get('.my-mounts-btn')
       .click()
       .url()
       .should('contain', '/collectedmounts')
@@ -89,7 +89,9 @@ describe('Should search for a mount', () => {
       .get('.collected-mounts-container')
       .children()
       .should('have.length', 0);
-      cy.get('img').should('exist')
-      .get('p').should('contain', "You don't have any mounts yet, add some!")
+    cy.get('img')
+      .should('exist')
+      .get('p')
+      .should('contain', "You don't have any mounts yet, add some!");
   });
 });
