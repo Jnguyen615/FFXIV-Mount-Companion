@@ -12,10 +12,15 @@ describe('should visit the logo page', () => {
 
   it('should display the logo page and navigate to the main page', () => {
     cy.visit("http://localhost:3000/");
-    cy.get(".ffxiv-logo").should('exist')
-    .get(".black-chocobo").should('exist')
-    cy.get('.page-name').should('contain', "Save your collected mounts here!" )
-    .get(".click-me").click()
-    .url().should('include', '/main')
-  })
-})
+
+    cy.get(".logo-page").within(() => {
+      cy.get(".ff-logo-container").should('exist');
+      cy.get(".ffxiv-logo").should('exist');
+        cy.get(".black-chocobo").should('exist');
+        cy.get('.page-name').should('contain', "Save your collected mounts here!");
+        cy.get(".click-me").click();
+    });
+    cy.url().should('include', '/main');
+  });
+});
+      
