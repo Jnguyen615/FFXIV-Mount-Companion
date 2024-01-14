@@ -37,8 +37,8 @@
 3. Run the command  `npm install` to install dependencies.
 4. Run the command `npm start` to start the server.
 5. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-6. You can also view the project <a href="https://ffxiv-mount-companion.vercel.app
-">
+6. You can also view the project <a href="ffxiv-mount-companion-7aigj2w0p-jen-nguyens-projects.vercel.app"
+>
 
 here</a>.
 7. Use control C to stop the server.
@@ -46,7 +46,7 @@ here</a>.
 
 <h2  id="preview"> 🎥 Preview 📱 </h2>
 
-![Gif](https://github.com/Jnguyen615/FFXIV-Mount-Companion/assets/119434450/0bf59346-8245-4bc9-9dd5-8c2dacd1a149)
+![giphy](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHd5Yzh6eTRhMDJjd2Fobms2dTkzN2tqY2wxdndkZ2dibnVwaDJwbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KOPphsWiThdRthWlST/giphy.gif)
 
 
 

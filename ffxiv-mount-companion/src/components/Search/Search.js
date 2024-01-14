@@ -8,21 +8,20 @@ const Search = ({ mounts, setFilteredMounts, onSearch }) => {
   const handleSearchChange = (event) => {
     const term = event.target.value;
     setSearchTerm(term);
-    onSearch(term)
-  };
+    onSearch(term);
 
-  useEffect(() => {
-    const lowerCaseTerms = searchTerm.toLowerCase().split(' ');
-  
-    const filteredMounts = searchTerm
-      ? mounts.filter(mount => {
+    const lowerCaseTerms = term.toLowerCase().split(' ');
+
+    const filteredMounts = term
+      ? mounts.filter((mount) => {
           const mountName = mount.name.toLowerCase();
-          return lowerCaseTerms.every(term => mountName.includes(term));
+          return lowerCaseTerms.every((t) => mountName.includes(t));
         })
       : mounts;
-  
+
     setFilteredMounts(filteredMounts);
-  }, [searchTerm, setFilteredMounts, mounts]);
+  };
+
   
 
   return (
