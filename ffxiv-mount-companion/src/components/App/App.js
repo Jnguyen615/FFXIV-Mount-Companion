@@ -50,7 +50,6 @@ function App() {
     }
   };
       
-   
   return (
     <main className="app">
       <Routes>
@@ -63,7 +62,6 @@ function App() {
               mounts={mounts}
               collectedMounts={collectedMounts}
               toggleCollectedMounts={toggleCollectedMounts}
-              setSelectedMountId={setSelectedMountId}
               setFilteredMounts={setFilteredMounts}
               openIndividualMountPage={openIndividualMountPage}
             />

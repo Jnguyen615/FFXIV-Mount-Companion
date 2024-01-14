@@ -79,11 +79,11 @@ describe('FFXIV Mount Companion App', () => {
       .children()
       .should('have.length', 1)
       .within(() => {
-        cy.contains('h3', 'Quaqua')
-          cy.contains(
-            'p',
-            "Summon forth your quaqua, a familiar hailing from the south sea isles that has either a permanent snarl or grin, depending on one's outlook on life.",
-          )
+        cy.contains('h3', 'Quaqua');
+        cy.contains(
+          'p',
+          "Summon forth your quaqua, a familiar hailing from the south sea isles that has either a permanent snarl or grin, depending on one's outlook on life.",
+        )
           .get('img')
           .should('exist')
           .get('svg')

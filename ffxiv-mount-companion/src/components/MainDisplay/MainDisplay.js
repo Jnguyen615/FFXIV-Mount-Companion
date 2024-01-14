@@ -4,7 +4,7 @@ import MountCard from '../MountCard/MountCard';
 import Header from '../Header/Header';
 import FFXIVLogo from '../FFXIVLogo/FFXIVLogo';
 import Search from '../Search/Search';
-import ScrollFollowButton from '../ScrollFollowButton/ScrollFollowButton'
+import ScrollFollowButton from '../ScrollFollowButton/ScrollFollowButton';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
@@ -17,7 +17,6 @@ const MainDisplay = ({
   openIndividualMountPage,
 }) => {
   const [searchTerm, setSearchTerm] = useState('');
-  const navigate = useNavigate();
 
   const handleSearch = term => {
     setSearchTerm(term);
@@ -25,7 +24,7 @@ const MainDisplay = ({
   };
 
   const filteredMounts = mounts.filter(mount =>
-    mount.name.toLowerCase().startsWith(searchTerm.toLowerCase()),
+    mount.name.toLowerCase().includes(searchTerm.toLowerCase()),
   );
 
   const mountCards = filteredMounts.map(mount => (
@@ -51,8 +50,8 @@ const MainDisplay = ({
       <ScrollFollowButton />
       <Search
         onSearch={handleSearch}
-        mounts={mounts}
-        setFilteredMounts={setFilteredMounts}
+        searchTerm={searchTerm}
+        setSearchTerm={setSearchTerm}
       />
       <div className="mounts-container">{mountCards}</div>
     </main>
@@ -63,7 +62,6 @@ MainDisplay.propTypes = {
   mounts: PropTypes.array.isRequired,
   collectedMounts: PropTypes.array.isRequired,
   toggleCollectedMounts: PropTypes.func.isRequired,
-  setSelectedMountId: PropTypes.func.isRequired,
   setFilteredMounts: PropTypes.func.isRequired,
   openIndividualMountPage: PropTypes.func.isRequired,
 };

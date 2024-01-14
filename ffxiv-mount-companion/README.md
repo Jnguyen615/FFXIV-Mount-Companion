@@ -37,12 +37,10 @@
 3. Run the command  `npm install` to install dependencies.
 4. Run the command `npm start` to start the server.
 5. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-6. You can also view the project <a href="ffxiv-mount-companion-7aigj2w0p-jen-nguyens-projects.vercel.app"
->
-
-here</a>.
+6. You can also view the project <a href="ffxiv-mount-companion-7aigj2w0p-jen-nguyens-projects.vercel.app">here</a>.
 7. Use control C to stop the server.
 8. To test, run the command `npx cypress open`.
+9. To search for mounts (if you are not familar with them), try the words 'chocobo' or 'moogle' to see different results of some of my favorite mounts! 
 
 <h2  id="preview"> 🎥 Preview 📱 </h2>
 
