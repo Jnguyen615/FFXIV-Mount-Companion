@@ -46,6 +46,8 @@
 
 ![giphy](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExeHd5Yzh6eTRhMDJjd2Fobms2dTkzN2tqY2wxdndkZ2dibnVwaDJwbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/KOPphsWiThdRthWlST/giphy.gif)
 
+![giphy](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNGdzYTJkaWZqdzdoMnRkMnJscmh6eWR3cXk5NGY0cW0zMHJ1ZHNkdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NaJuThqOyNxnevVJOC/giphy.gif)
+
 <img width="299" alt="Screenshot 2024-01-12 at 8 02 01 PM" src="https://github.com/Jnguyen615/FFXIV-Mount-Companion/assets/119434450/e8de2666-aea0-4807-bd6b-23be339f426b">
 
 <img width="298" alt="Screenshot 2024-01-12 at 8 01 50 PM" src="https://github.com/Jnguyen615/FFXIV-Mount-Companion/assets/119434450/b98f7dca-5014-47a7-874e-ecd440b48bd7">
