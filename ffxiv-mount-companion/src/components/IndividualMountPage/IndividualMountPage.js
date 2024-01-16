@@ -18,7 +18,9 @@ const IndividualMountCard = ({
  
 
   const handleToggleFavorite = () => {
+    if(mount){
     toggleCollectedMounts(mount);
+    }
   };
 
   return (
