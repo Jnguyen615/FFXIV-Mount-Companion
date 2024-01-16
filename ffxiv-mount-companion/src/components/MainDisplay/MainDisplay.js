@@ -6,9 +6,8 @@ import FFXIVLogo from '../FFXIVLogo/FFXIVLogo';
 import Search from '../Search/Search';
 import ScrollFollowButton from '../ScrollFollowButton/ScrollFollowButton';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
-
+import Moogle from '../../Images /moggle3.png'
 const MainDisplay = ({
   mounts,
   collectedMounts,
@@ -53,7 +52,15 @@ const MainDisplay = ({
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
       />
-      <div className="mounts-container">{mountCards}</div>
+      {filteredMounts.length > 0 ? (
+        <div className="mounts-container">{mountCards}</div>
+      ) : (
+        <div className="no-mounts-container">
+        <h1 className="no-mounts-message">No mounts found! Search again!</h1>
+        <img className='moogle' src={Moogle} alt='moogle image'/>
+        </div>
+      )}
+  
     </main>
   );
 };
