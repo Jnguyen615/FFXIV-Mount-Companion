@@ -7,6 +7,22 @@
   background-color: $primaryBlack;
 }
 
+.no-mounts-message {
+  text-align: center;
+  margin-top: 20px;
+  color: white;
+}
+
+.no-mounts-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.moogle {
+  height: 300px;
+}
+
 @media screen and (max-width: 455px) {
   .mounts-container {
     grid-template-columns: repeat(2, 1fr);

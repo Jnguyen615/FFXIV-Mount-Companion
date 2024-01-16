@@ -15,6 +15,7 @@ const IndividualMountCard = ({
   const mountId = parseInt(id);
   const mount = mounts.find(mount => mount.id === mountId);
   const isCollected = collectedMounts.some(mount => mount.id === mountId);
+ 
 
   const handleToggleFavorite = () => {
     toggleCollectedMounts(mount);
